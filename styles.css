@@ -51,9 +51,10 @@ table {
   /* radial-gradient( circle farthest-corner at 10% 20%, #202843 0%, rgba(1,50,32,1) 100.8% ) */
   /* radial-gradient( circle farthest-corner at 7% 12.8%, rgba(199,250,237,0.69) 11.1%, rgba(127,174,244,1) 38.7%, rgba(75,104,226,1) 51.7%, 
   rgba(218,187,242,1) 61.5%, rgba(250,164,210,1) 78.8%, rgba(242,187,199,1) 90% ) */
-  --gradient: radial-gradient( circle farthest-corner at 10% 20%, #202843 0%, rgba(1,50,32,1) 100.8% ) ;
-  --background-color: #fff;
-  --text-color: #212121;
+  --gradient: radial-gradient( circle farthest-corner at 7% 12.8%, rgba(199,250,237,0.69) 11.1%, rgba(127,174,244,1) 38.7%, rgba(75,104,226,1) 51.7%, 
+  rgba(218,187,242,1) 61.5%, rgba(250,164,210,1) 78.8%, rgba(242,187,199,1) 90% ) ;
+  --background-color: #212121;
+  --text-color: #fff;
 }
 
 html {
@@ -137,11 +138,21 @@ body {
   align-items: center;
   list-style: none;
   text-align: center;
+  margin-right: 2%;
 }
 
 .navbar__item {
   display: flex;
   height: 80px;
+}
+
+#change__icon {
+  display: flex;
+  margin-top: 1.5%;
+  margin-left: -33%;
+  margin-right: -2%;
+  height: 30px;
+  cursor: pointer;
 }
 
 .navbar__links {
@@ -186,7 +197,7 @@ body {
 }
 
 .navbar__links:hover {
-  color: #56c3ea;
+  color: var(--text-color);
   transition: all 0.3s ease;
 }
 
@@ -285,6 +296,12 @@ body {
   }
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #change__icon {
+    margin-top:2.5%;
+    margin-left: AUTO;
+    margin-right: 0;
   }
 }
 
@@ -566,6 +583,7 @@ body {
     padding: 10px;
     width: 100%;
   }
+  
 }
 
 /* Contact Page CSS */
@@ -576,7 +594,7 @@ body {
 }
 
 form {
-  background: #fff;
+  background: var(--text-color);
   display: flex;
   flex-direction: column;
   padding: 2rem 4rem;
@@ -590,6 +608,7 @@ form h3 {
   font-weight: 800;
   margin-bottom: 30px;
   font-size: 16px;
+  color: var(--background-color);
 }
 
 form input, form textarea {
@@ -597,14 +616,14 @@ form input, form textarea {
   margin: 10px 0;
   padding: 20px;
   outline: none;
-  background: #f5f5f5;
+  background: var(--background-color);
   font-size: 16px;
 }
 
 form button {
   padding: 15px;
-  background: #ff5361;
-  color: #fff;
+  background: var(--background-color);
+  color: var(--text-color);
   font-size: 18px;
   border: 0;
   outline: none;
@@ -612,4 +631,14 @@ form button {
   width: 150px;
   margin: 20px auto 0;
   border-radius: 10%;
+}
+
+
+
+
+
+.dark-theme {
+  --gradient: radial-gradient( circle farthest-corner at 10% 20%, #202843 0%, rgba(1,50,32,1) 100.8% );
+  --background-color: #fff;
+  --text-color: #212121;
 }
