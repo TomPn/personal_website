@@ -227,7 +227,7 @@ body {
   }
 
   .navbar__menu.active {
-    background: var(--background-color);
+    background: var(--text-color);
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -245,7 +245,7 @@ body {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background: var(--background-color);
+    background: var(--text-color);
   }
 
   .navbar__item {
@@ -260,7 +260,7 @@ body {
     padding: 2rem;
     width: 100%;
     display: table;
-    color: var(--text-color);
+    color: var(--background-color);
   }
 
   #mobile-menu {
@@ -632,10 +632,6 @@ form button {
   margin: 20px auto 0;
   border-radius: 10%;
 }
-
-
-
-
 
 .dark-theme {
   --gradient: radial-gradient( circle farthest-corner at 10% 20%, #202843 0%, rgba(1,50,32,1) 100.8% );
